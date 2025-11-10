@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Calculator</title>
+  <!-- Linking external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Calculator Container -->
+  <div class="calculator">
+
+    <div class="namehead">CALCULATOR</div>
+
+    <!-- Display area for input and results -->
+    <input type="text" id="display" readonly />
+
+    <!-- Calculator Buttons Section -->
+    <div class="buttons">
+      <!-- Top control buttons -->
+      <button class="btn" onclick="clearDisplay()">C</button>
+      <button class="btn" onclick="deleteLast()">DEL</button>
+      <button class="btn" onclick="appendValue('mod')">mod</button>
+      <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn" onclick="appendValue('7')">7</button>
+      <button class="btn" onclick="appendValue('8')">8</button>
+      <button class="btn" onclick="appendValue('9')">9</button>
+      <button class="btn operator" onclick="appendValue('*')">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn" onclick="appendValue('4')">4</button>
+      <button class="btn" onclick="appendValue('5')">5</button>
+      <button class="btn" onclick="appendValue('6')">6</button>
+      <button class="btn operator" onclick="appendValue('-')">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn" onclick="appendValue('1')">1</button>
+      <button class="btn" onclick="appendValue('2')">2</button>
+      <button class="btn" onclick="appendValue('3')">3</button>
+      <button class="btn operator" onclick="appendValue('+')">+</button>
+
+      <!-- Last row -->
+      <button class="btn" onclick="appendValue('0')">0</button>
+      <button class="btn" onclick="appendValue('.')">.</button>
+      <button class="btn" onclick="appendValue('%')">%</button>
+      <button class="btn equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <!-- Linking external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
